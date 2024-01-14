@@ -1,0 +1,171 @@
+.homepage-container {
+    display: flex;
+    height: calc(90vh - 10vh); /* 90vh minus the height of the navigation bar */
+    padding: 20px;
+  }
+  
+  .left-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4; /* Adjust the background color */
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .welcome-text,
+  .title-text,
+  .tagline-text {
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .join-text {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .description-text {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .role-buttons {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .role-button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF; /* Adjust the background color */
+    color: #fff; /* Adjust the text color */
+    text-decoration: none;
+  }
+  .role-button:last-child{
+    margin-top: 20px;
+  }
+  
+  .role-button:hover {
+    background-color: #0056b3; /* Adjust the hover background color */
+  }
+  
+
+  /* new section */
+
+.your-role-section {
+    background-color: #f4f4f4; /* Adjust the background color */
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .roles-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .role-section {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ddd; /* Add a border for separation */
+    border-radius: 8px;
+  }
+  
+  .role-section h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .role-section ul {
+    list-style-type: circle;
+    padding: 0;
+  }
+  
+  .role-section li {
+    margin: 10px 0;
+    font-size: 1.2rem;
+  }
+  
+  .bottom-section {
+    background-color: #007BFF; /* Adjust the background color */
+    color: #fff; /* Adjust the text color */
+    text-align: center;
+    padding: 60px 20px;
+  }
+  
+  .bottom-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .description {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+
+  /* section 2 */
+
+  .offers-section {
+    text-align: center;
+    margin-top: 30px;
+  }
+  .offers-section h2{
+    font-size: 2rem;
+  }
+  
+  .offers-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Adjusted to 3 columns */
+    grid-gap: 20px;
+    justify-content: center;
+  }
+  
+  /* section 2 */
+  
+  /* section 3 */
+
+.tech-stack-section {
+    text-align: center;
+    margin-top: 50px; /* Adjust as needed */
+    background-color: #f8f9fa; /* Add background color to the tech-stack section */
+    padding: 20px; /* Add padding for better visual appeal */
+  }
+  
+  .tech-stack-title {
+    font-size: 2rem; /* Set the title font size */
+  }
+  
+  .tech-stack-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .join-today-title {
+    text-align: center;
+    font-size: 2.5rem; /* Adjust font size */
+    font-weight: bold;
+    margin-top: 20px; /* Add margin for spacing */
+    color: #3498db; /* Match the color to your design */
+    margin-top: 15vh;
+  }
+  
+  

@@ -1,0 +1,70 @@
+/* Responsive Navigation Bar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    height: 10vh;
+    background-color: #3498db; /* background color */
+    color: white; /* text color */
+  }
+  
+  .left-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 50px; /* logo height */
+    margin-right: 10px;
+  }
+  
+  .brand-text {
+    font-size: 1.5rem;
+  }
+  
+  .right-section {
+    display: flex;
+  }
+  
+  .nav-link {
+    margin-left: 15px;
+    text-decoration: none;
+    color: white; /* link color */
+  
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      height: auto;
+      padding: 10px;
+    }
+  
+    .left-section {
+      margin-bottom: 10px;
+    }
+  
+    .logo {
+      margin-right: 0;
+    }
+  
+    .brand-text {
+      margin-left: 10px;
+      text-align: center;
+    }
+  
+    .right-section {
+      margin-top: 10px;
+    }
+  
+    .nav-link {
+      display: block;
+      margin: 10px 0;
+    }
+  }
+  
