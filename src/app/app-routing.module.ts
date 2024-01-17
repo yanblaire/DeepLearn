@@ -14,6 +14,7 @@ const routes: Routes = [
   { path: 'instructor-competencies', component: InstructorAddCompetenciesComponent },
   { path: 'instructor-student-detail', component: InstructorStudentDetailViewComponent },
   { path: 'student', component: StudentViewComponent },
+  { path: 'home-page', component: HomePageComponent },
 
 ];
 
