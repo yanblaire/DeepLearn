@@ -10,6 +10,8 @@ import { InstructorStudentDetailViewComponent } from './instructor-student-detai
 import { InstructorAddCompetenciesComponent } from './instructor-add-competencies/instructor-add-competencies.component';
 import { StudentViewComponent } from './student-view/student-view.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { SideBarComponent } from './side-bar/side-bar.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { HomePageComponent } from './home-page/home-page.component';
     InstructorStudentDetailViewComponent,
     InstructorAddCompetenciesComponent,
     StudentViewComponent,
-    HomePageComponent
+    HomePageComponent,
+    NavBarComponent,
+    SideBarComponent
   ],
   imports: [
     BrowserModule,

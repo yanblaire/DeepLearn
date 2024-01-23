@@ -1,0 +1,33 @@
+.navBar{
+    background-color: white;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.title{
+    margin-left: 10px;
+}
+.title p{
+    font-size: 50px;
+    color: rgb(20, 37, 97);
+}
+
+.right{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+}
+.profile{
+    height: 50px;
+    width: 50px;
+    background-color: rgb(20, 37, 97);
+    border-radius: 50%;
+}
+.back p, a{
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+}
