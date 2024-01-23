@@ -25,9 +25,18 @@
     width: 50px;
     background-color: rgb(20, 37, 97);
     border-radius: 50%;
+    margin-right: 5px;
 }
 .back p, a{
     padding: 10px 20px;
     text-decoration: none;
-    color: black;
+    color: rgb(20, 37, 97);
+    font-size: large;
+    font-weight: bolder;
+}
+.back p:hover{
+    background-color: rgb(20, 37, 97);
+    color: white;
+    border-radius: 20px
+
 }

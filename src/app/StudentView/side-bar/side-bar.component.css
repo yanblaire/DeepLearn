@@ -21,3 +21,8 @@
 .home, .dashboard, .myCourses, .settings{
     padding: 10px;
 }
+.home:hover, .dashboard:hover, .myCourses:hover, .settings:hover{
+    background-color: white;
+    /* opacity: 50%; */
+    border-radius: 20px;
+}
