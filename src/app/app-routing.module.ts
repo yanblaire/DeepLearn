@@ -11,6 +11,7 @@ import { DashboardComponent } from './StudentView/dashboard/dashboard.component'
 import { MyCoursesComponent } from './StudentView/my-courses/my-courses.component';
 import { SettingsComponent } from './StudentView/settings/settings.component';
 import { ProfileComponent } from './StudentView/profile/profile.component';
+import { CourseComponent } from './StudentView/course/course.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'myCourses', component: MyCoursesComponent },
   { path: 'settings', component: SettingsComponent },
   { path: 'profile', component: ProfileComponent },
+  { path: 'course', component: CourseComponent },
 
 ];
 

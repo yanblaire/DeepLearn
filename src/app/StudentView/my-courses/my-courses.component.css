@@ -12,3 +12,14 @@ section{
     font-weight: bold;
     margin: 20px;
 }
+.class1{
+    background-color: white;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+.class1 p{
+    font-size: x-large;
+}

@@ -5,4 +5,16 @@
   </ul>
 </nav> -->
 <!-- <app-home-page></app-home-page> -->
-<router-outlet></router-outlet>
+<!-- <router-outlet></router-outlet> -->
+<app-nav-bar *ngIf="user.userType == 'student'"></app-nav-bar>
+<app-side-bar *ngIf="user.userType == 'student'"></app-side-bar>
+
+<section>
+  <div class="body">
+      <!-- <app-home *ngIf="menu.MenuState == 'home'"></app-home>
+      <app-dashboard *ngIf="menu.MenuState == 'dashboard'"></app-dashboard>
+      <app-my-courses *ngIf="menu.MenuState == 'mycourses'"></app-my-courses>
+      <app-settings *ngIf="menu.MenuState == 'setting'"></app-settings> -->
+      <router-outlet></router-outlet>
+  </div>
+</section>
