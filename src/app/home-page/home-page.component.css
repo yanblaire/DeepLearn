@@ -1,0 +1,100 @@
+section{
+    background-color: rgb(20, 27, 97);
+    height: 100vh;
+}
+.navbar{
+    text-align: end;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.navbar a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    margin-top: 100px;
+}
+.title{
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 0px;
+    font-family: Nico Moji;
+}
+.desc{
+    color: white;
+    text-align: center;
+}
+.content{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    padding-top: 15vh;
+
+}
+.left{
+    height: 50vh;
+    width: 50vw;
+    position: relative;
+}
+.left img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 419px;
+    height: 370px;
+    border-radius: 20px;
+    opacity: 0.5;
+    filter: blur(2.5px);
+}
+.left h2{
+    transform: rotate(-90.033deg);
+    color: #FFF;
+    font-size: 96px;
+    font-size: 400;
+    position: absolute;
+    top: 15%;
+    left: -18%;
+}
+.left h3{
+    color: #FFF;
+    font-size: 64px;
+    font-weight: 400;
+    position: absolute;
+    top: -35%;
+    left: 45%;
+}
+.left h4{
+    text-align: center;
+    align-items: center;
+    color: #FFF;
+    font-size: 48px;
+    font-weight: 400;
+}
+.right{
+    height: 50vh;
+    width: 50vw;
+    color: white;
+    text-align: center;
+}
+.right h2{
+    font-size: 40px;
+}
+.right h3{
+    width: 400px;
+    position: relative;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.buttons button{
+    width: 250px;
+    padding: 5px;
+    margin: 10px;
+}

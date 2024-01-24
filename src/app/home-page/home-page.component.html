@@ -1,1 +1,29 @@
-<p>home-page works!</p>
+<section>
+    <div class="navbar">
+        <a routerLink="/AboutUs">About Us</a>
+        <a routerLink="/ContactUs">Contact Us</a>
+    </div>
+    <h1 class="title">DEEPLEARN</h1>
+    <h3 class="desc">Adaptive Learning Platform</h3>
+    <div class="content">
+        <div class="left">
+            <img src="../../assets/homeImage.jpg">
+            <h2>DeepLearn</h2>
+            <h3>Welcome</h3>
+            <h4>Empowering <br>
+                the <br>
+                Future <br>
+                of <br>
+                Education</h4>
+        </div>
+        <div class="right">
+            <h2>Join DeepLearn Today!</h2>
+            <h3>Ready to revolutionize education? Choose your role and join the future of learning with DeepLearn.</h3>
+            <div class="buttons">
+                <button class="studentNav" routerLink="/student" (click)="user.userType = 'student'">I am a Student</button>
+                <button class="InstructorNav" routerLink="/instructor-class">I am a Professor</button>
+            </div>
+
+        </div>
+    </div>
+</section>

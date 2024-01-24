@@ -8,8 +8,15 @@ import { InstructorStudentDashboardComponent } from './instructor-student-dashbo
 import { InstructorStudentDetailViewComponent } from './instructor-student-detail-view/instructor-student-detail-view.component';
 
 import { InstructorAddCompetenciesComponent } from './instructor-add-competencies/instructor-add-competencies.component';
-import { StudentViewComponent } from './student-view/student-view.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { NavBarComponent } from './StudentView/nav-bar/nav-bar.component';
+import { SideBarComponent } from './StudentView/side-bar/side-bar.component';
+import { HomeComponent } from './StudentView/home/home.component';
+import { DashboardComponent } from './StudentView/dashboard/dashboard.component';
+import { MyCoursesComponent } from './StudentView/my-courses/my-courses.component';
+import { SettingsComponent } from './StudentView/settings/settings.component';
+import { ProfileComponent } from './StudentView/profile/profile.component';
+import { CourseComponent } from './StudentView/course/course.component';
 
 @NgModule({
   declarations: [
@@ -18,8 +25,15 @@ import { HomePageComponent } from './home-page/home-page.component';
     InstructorStudentDashboardComponent,
     InstructorStudentDetailViewComponent,
     InstructorAddCompetenciesComponent,
-    StudentViewComponent,
-    HomePageComponent
+    HomePageComponent,
+    NavBarComponent,
+    SideBarComponent,
+    HomeComponent,
+    DashboardComponent,
+    MyCoursesComponent,
+    SettingsComponent,
+    ProfileComponent,
+    CourseComponent
   ],
   imports: [
     BrowserModule,

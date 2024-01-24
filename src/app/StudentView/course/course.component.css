@@ -1,0 +1,42 @@
+section{
+    height: calc(100vh - 10vh);
+    width: calc(100vw - 15vw);
+    background-color: rgb(15, 38, 107);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.className p{
+    color: white;
+    font-size: x-large;
+    font-weight: bold;
+    margin: 20px;
+}
+.chatBox{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+.typeMessage{
+    width: 625px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.47);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.left{
+    margin-left: 10px;
+}
+.left p{
+    margin: 10px 0px;
+}
+.left input{
+    width: 500px;
+}
+.goback p{
+    color: white;
+    font-size: larger;
+    margin-left: 20px;
+}
