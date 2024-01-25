@@ -1,171 +1,135 @@
-.homepage-container {
-    display: flex;
-    height: calc(90vh - 10vh); /* 90vh minus the height of the navigation bar */
-    padding: 20px;
-  }
-  
-  .left-section {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .right-section {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #f4f4f4; /* Adjust the background color */
-    padding: 20px;
-    border-radius: 8px;
-  }
-  
-  .welcome-text,
-  .title-text,
-  .tagline-text {
-    font-weight: bold;
-    text-align: center;
-  }
-  
-  .join-text {
-    font-weight: bold;
-    font-size: 1.2rem;
-  }
-  
-  .description-text {
-    margin-top: 10px;
-    text-align: center;
-  }
-  
-  .role-buttons {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .role-button {
-    padding: 10px 20px;
-    margin: 0 10px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    background-color: #007BFF; /* Adjust the background color */
-    color: #fff; /* Adjust the text color */
-    text-decoration: none;
-  }
-  .role-button:last-child{
-    margin-top: 20px;
-  }
-  
-  .role-button:hover {
-    background-color: #0056b3; /* Adjust the hover background color */
-  }
-  
 
-  /* new section */
+@font-face {
+  font-family: Nothing;
+  src: url("../../fonts/NothingYouCouldDo-Regular.ttf");
+}
+@font-face {
+  font-family: Nico;
+  src: url("../../fonts/NicoMoji-Regular.ttf");
+}
+section{
+  background-image: url(../../assets/home.png);
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+.navbar{
+  text-align: end;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+.navbar a{
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  margin-top: 100px;
+  font-family: Nothing;
+}
+.line{
+  width: 500px;
+  height: 2px;
+  background-color: #FFF;
+  margin-top: 12px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.title{
+  color: white;
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 0px;
+  font-family: Nico;
+}
+.desc{
+  color: white;
+  text-align: center;
+  font-family: Nothing;
+  margin-top: 1;
+}
+.content{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  padding-top: 15vh;
 
-.your-role-section {
-    background-color: #f4f4f4; /* Adjust the background color */
-    padding: 40px 20px;
-    text-align: center;
-  }
-  
-  .roles-container {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-  }
-  
-  .role-section {
-    flex: 1;
-    padding: 20px;
-    border: 1px solid #ddd; /* Add a border for separation */
-    border-radius: 8px;
-  }
-  
-  .role-section h3 {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
-  .role-section ul {
-    list-style-type: circle;
-    padding: 0;
-  }
-  
-  .role-section li {
-    margin: 10px 0;
-    font-size: 1.2rem;
-  }
-  
-  .bottom-section {
-    background-color: #007BFF; /* Adjust the background color */
-    color: #fff; /* Adjust the text color */
-    text-align: center;
-    padding: 60px 20px;
-  }
-  
-  .bottom-section h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .description {
-    font-size: 1.2rem;
-    line-height: 1.5;
-  }
-
-  /* section 2 */
-
-  .offers-section {
-    text-align: center;
-    margin-top: 30px;
-  }
-  .offers-section h2{
-    font-size: 2rem;
-  }
-  
-  .offers-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Adjusted to 3 columns */
-    grid-gap: 20px;
-    justify-content: center;
-  }
-  
-  /* section 2 */
-  
-  /* section 3 */
-
-.tech-stack-section {
-    text-align: center;
-    margin-top: 50px; /* Adjust as needed */
-    background-color: #f8f9fa; /* Add background color to the tech-stack section */
-    padding: 20px; /* Add padding for better visual appeal */
-  }
-  
-  .tech-stack-title {
-    font-size: 2rem; /* Set the title font size */
-  }
-  
-  .tech-stack-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-
-  .join-today-title {
-    text-align: center;
-    font-size: 2.5rem; /* Adjust font size */
-    font-weight: bold;
-    margin-top: 20px; /* Add margin for spacing */
-    color: #3498db; /* Match the color to your design */
-    margin-top: 15vh;
-  }
-  
-  
+}
+.left{
+  height: 50vh;
+  width: 50vw;
+  position: relative;
+}
+.left img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 419px;
+  height: 370px;
+  border-radius: 20px;
+  opacity: 0.5;
+  filter: blur(2.5px);
+}
+.left h2{
+  transform: rotate(-90.033deg);
+  color: #FFF;
+  font-size: 80px;
+  font-size: 400;
+  position: absolute;
+  top: 15%;
+  left: -18%;
+  font-family: Nico;
+}
+.left h3{
+  color: #FFF;
+  font-size: 64px;
+  font-weight: 400;
+  position: absolute;
+  top: -35%;
+  left: 45%;
+  font-family: Nico;
+}
+.left h4{
+  text-align: center;
+  align-items: center;
+  color: #FFF;
+  font-size: 40px;
+  font-weight: 400;
+  font-family: Nothing;
+}
+.right{
+  height: 50vh;
+  width: 50vw;
+  color: white;
+  text-align: center;
+}
+.right h2{
+  font-size: 40px;
+}
+.right h3{
+  width: 400px;
+  position: relative;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.buttons{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.buttons button{
+  width: 250px;
+  height: 50px;
+  padding: 5px;
+  margin: 10px;
+  background-color: rgb(150, 218, 237);
+  border: none;
+  border-radius: 20px;
+  font-size: large;
+  font-weight: bold;
+}
+.buttons button:hover{
+  background-color: white;
+}

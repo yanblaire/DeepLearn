@@ -6,7 +6,8 @@ import { InstructorStudentDashboardComponent } from './instructor-student-dashbo
 import { InstructorAddCompetenciesComponent } from './instructor-add-competencies/instructor-add-competencies.component';
 import { InstructorStudentDetailViewComponent } from './instructor-student-detail-view/instructor-student-detail-view.component';
 import { StudentViewComponent } from './student-view/student-view.component';
-import { InstructorComponent } from './instructor/instructor.component';
+import { InstructorsViewComponent } from './instructors-view/instructors-view.component';
+import { CourseComponent } from './course/course.component';
 
 
 const routes: Routes = [
@@ -16,8 +17,9 @@ const routes: Routes = [
   { path: 'instructor-competencies', component: InstructorAddCompetenciesComponent },
   { path: 'instructor-student-detail', component: InstructorStudentDetailViewComponent },
   { path: 'student', component: StudentViewComponent },
-  { path: 'instructor', component: InstructorComponent },
+  { path: 'instructor', component: InstructorsViewComponent },
   { path: 'home', component: HomePageComponent },
+  { path: 'course', component: CourseComponent },
 
 ];
 

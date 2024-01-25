@@ -7,15 +7,11 @@ import { AppComponent } from './app.component';
 import { InstructorClassDashboardComponent } from './instructor-class-dashboard/instructor-class-dashboard.component';
 import { InstructorStudentDashboardComponent } from './instructor-student-dashboard/instructor-student-dashboard.component';
 import { InstructorStudentDetailViewComponent } from './instructor-student-detail-view/instructor-student-detail-view.component';
-
 import { InstructorAddCompetenciesComponent } from './instructor-add-competencies/instructor-add-competencies.component';
 import { StudentViewComponent } from './student-view/student-view.component';
 import { HomePageComponent } from './home-page/home-page.component';
-import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
-import { OfferComponent } from './offer/offer.component';
-import { TechStackComponent } from './tech-stack/tech-stack.component';
-import { FooterComponent } from './footer/footer.component';
-import { InstructorComponent } from './instructor/instructor.component';
+import { InstructorsViewComponent } from './instructors-view/instructors-view.component';
+import { CourseComponent } from './course/course.component';
 
 @NgModule({
   declarations: [
@@ -26,11 +22,8 @@ import { InstructorComponent } from './instructor/instructor.component';
     InstructorAddCompetenciesComponent,
     StudentViewComponent,
     HomePageComponent,
-    NavigationBarComponent,
-    OfferComponent,
-    TechStackComponent,
-    FooterComponent,
-    InstructorComponent,
+    InstructorsViewComponent,
+    CourseComponent,
   ],
   imports: [
     BrowserModule,

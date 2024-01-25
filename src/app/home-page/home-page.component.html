@@ -1,93 +1,33 @@
-<app-navigation-bar></app-navigation-bar>
-
-<div class="homepage-container">
-    <div class="left-section">
-      <p class="welcome-text">Welcome To</p>
-      <h1 class="title-text">DeepLearn</h1>
-      <p class="tagline-text">Empowering the Future of Education</p>
-    </div>
-  
-    <div class="right-section">
-      <p class="join-text">Join DeepLearn Today!</p>
-      <p class="description-text">
-        Ready to revolutionize education? Choose your role and join the future of learning with DeepLearn.
-      </p>
-      
-      <div class="role-buttons">
-        <a routerLink="/student" class="role-button">I am a Student</a>
-        <a routerLink="/instructor" class="role-button">I am an Instructor</a>
+<section>
+  <div class="navbar">
+      <a routerLink="/AboutUs">About Us</a>
+      <a routerLink="/ContactUs">Contact Us</a>
+  </div>
+  <div class="top">
+      <h1 class="title">DEEPLEARN</h1>
+  <div class="line"></div>
+  <h3 class="desc">Adaptive Learning Platform</h3>
+  </div>
+  <div class="content">
+      <div class="left">
+          <img src="../../assets/homeImage.jpg">
+          <h2>DeepLearn</h2>
+          <h3>Welcome</h3>
+          <h4>Empowering <br>
+              the <br>
+              Future <br>
+              of <br>
+              Education</h4>
       </div>
-      
-    </div>
-  </div>
+      <div class="right">
+          <h2>Join DeepLearn Today!</h2>
+          <h3>Ready to revolutionize education? Choose your role and join the future of learning with DeepLearn.</h3>
+          <div class="buttons">
+              <button class="studentNav" routerLink="/student">I am a Student</button>
+              <button class="InstructorNav" routerLink="/instructor">I am a Professor</button>
+          </div>
 
-  <!-- section 1 -->
-
-<div class="your-role-section">
-    <h2>Your Role</h2>
-    <div class="roles-container">
-      <div class="role-section">
-        <h3>Student</h3>
-        <ul>
-          <!-- Add list items here -->
-          <li>Embark on a personalized learning journey tailored to your needs and preferences.</li>
-          <li>Engage in gamified elements, collaborative learning, and dynamic content delivery.</li>
-          <li>Say goodbye to test anxiety with conversational assessments.</li>
-          <!-- Add more as needed -->
-        </ul>
       </div>
-      <div class="role-section">
-        <h3>Instructor</h3>
-        <ul>
-          <!-- Add list items here -->
-          <li>Gain valuable insights to tailor interventions and support based on individual student progress.</li>
-          <li>Enhance teaching effectiveness with real-time feedback and continuous assessment.</li>
-          <li>Promote a positive and engaging classroom environment.</li>
-          <!-- Add more as needed -->
-        </ul>
-      </div>
-    </div>
   </div>
-  
-  <div class="bottom-section">
-    <h2>Transformative Adaptive Learning for the Future</h2>
-    <p class="description">
-      DeepLearn stands at the forefront of educational technology, offering a transformative solution that transcends the limitations of traditional teaching methods.
-      Unlock your full academic potential with us.
-    </p>
-  </div>
-  
-  <!-- end of section 1 -->
-  
-  <!-- section 2 -->
 
-<div class="offers-section">
-    <h2>DeepLearn Offers</h2>
-    <div class="offers-container">
-      <app-offer [title]="'Adaptive Learning Algorithms'" [description]="'Real-time adaptation for optimal engagement and comprehension.'"></app-offer>
-      <app-offer [title]="'Personalized Content Delivery'" [description]="'Tailored learning paths based on individual profiles.'"></app-offer>
-      <app-offer [title]="'Real-time Feedback and Assessment'" [description]="'Continuous assessments and performance analytics for improvement'"></app-offer>
-      <app-offer [title]="'Conversational Assessment Approach'" [description]="'Shift from traditional testing to thoughtful essay-based questions.'"></app-offer>
-      <app-offer [title]="'Gamification and Engagement'" [description]="'Recognition and rewards to foster motivation.'"></app-offer>
-      <app-offer [title]="'Tokenized Learning Wallet and Web3 Integration'" [description]="'DSecure and decentralized learning experience with blockchain technology.'"></app-offer>
-    </div>
-  </div>
-  
-  <!-- section 2 -->
-  
-<!-- section 3 -->
-
-<div class="tech-stack-section">
-    <h2 class="tech-stack-title">Our Tech Stack</h2>
-    <div class="tech-stack-container">
-      <app-tech-stack [title]="'Blockchain NFTs for Game Success'" [description]="'Authenticate in-game achievements transparently through blockchain NFTs.'"></app-tech-stack>
-      <app-tech-stack [title]="'Azure for Data Security'" [description]="'Utilize Microsoft Azure for secure storage and processing of student data.'"></app-tech-stack>
-      <app-tech-stack [title]="'Artificial Neural Network'" [description]="'Implement AI-driven analysis of learning habits for personalized recommendations.'"></app-tech-stack>
-    </div>
-    <p class="join-today-title">Join DeepLearn Today!</p> <!-- New title here -->
-  </div>
-  
-  <!-- section 3 -->
-
-  <app-footer></app-footer>
-  
+</section>
