@@ -1,11 +1,7 @@
 section{
+    background-image: url(../..//assets/home.png);
+    filter: blur(1px);
+    background-size: cover;
+    width: 100vw;
     height: 100vh;
-    background-color: rgb(20, 37, 97);
-}
-.body{
-    height: calc(100vh - 10vh);
-    width: calc(100vw - 15vw);
-    position: absolute;
-    right: 0;
-    bottom: 0;
 }

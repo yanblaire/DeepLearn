@@ -12,6 +12,7 @@ import { MyCoursesComponent } from './StudentView/my-courses/my-courses.componen
 import { SettingsComponent } from './StudentView/settings/settings.component';
 import { ProfileComponent } from './StudentView/profile/profile.component';
 import { CourseComponent } from './StudentView/course/course.component';
+import { InstructorsViewComponent } from './InstructorsView/instructors-view/instructors-view.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
@@ -27,6 +28,7 @@ const routes: Routes = [
   { path: 'settings', component: SettingsComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'course', component: CourseComponent },
+  { path: 'instructor', component: InstructorsViewComponent },
 
 ];
 

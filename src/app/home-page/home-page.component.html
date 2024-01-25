@@ -3,8 +3,11 @@
         <a routerLink="/AboutUs">About Us</a>
         <a routerLink="/ContactUs">Contact Us</a>
     </div>
-    <h1 class="title">DEEPLEARN</h1>
+    <div class="top">
+        <h1 class="title">DEEPLEARN</h1>
+    <div class="line"></div>
     <h3 class="desc">Adaptive Learning Platform</h3>
+    </div>
     <div class="content">
         <div class="left">
             <img src="../../assets/homeImage.jpg">
@@ -21,7 +24,7 @@
             <h3>Ready to revolutionize education? Choose your role and join the future of learning with DeepLearn.</h3>
             <div class="buttons">
                 <button class="studentNav" routerLink="/student" (click)="user.userType = 'student'">I am a Student</button>
-                <button class="InstructorNav" routerLink="/instructor-class">I am a Professor</button>
+                <button class="InstructorNav" routerLink="/instructor" (click)="user.userType = 'instructor'">I am a Professor</button>
             </div>
 
         </div>

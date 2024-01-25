@@ -17,6 +17,7 @@ import { MyCoursesComponent } from './StudentView/my-courses/my-courses.componen
 import { SettingsComponent } from './StudentView/settings/settings.component';
 import { ProfileComponent } from './StudentView/profile/profile.component';
 import { CourseComponent } from './StudentView/course/course.component';
+import { InstructorsViewComponent } from './InstructorsView/instructors-view/instructors-view.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { CourseComponent } from './StudentView/course/course.component';
     MyCoursesComponent,
     SettingsComponent,
     ProfileComponent,
-    CourseComponent
+    CourseComponent,
+    InstructorsViewComponent
   ],
   imports: [
     BrowserModule,
