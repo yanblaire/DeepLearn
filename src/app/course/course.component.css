@@ -1,3 +1,7 @@
+@font-face {
+    font-family: Nico;
+    src: url("../../fonts/NicoMoji-Regular.ttf");
+  }
 section{
     background-image: url(../../assets/home.png);
     /* filter: blur(1px); */
@@ -17,15 +21,6 @@ section{
     color: black;
     border-radius: 20px;
 }
-.line{
-    width: 300px;
-    height: 2px;
-    background-color: #FFF;
-    margin-top: 0;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
 .content{
     display: flex;
     flex-direction: row;
@@ -40,7 +35,6 @@ section{
 }
 .left h2{
     font-size: xx-large;
-    margin-bottom: 10px;
 }
 .left h2:b
 .right{

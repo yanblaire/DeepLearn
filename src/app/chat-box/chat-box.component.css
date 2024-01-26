@@ -1,0 +1,42 @@
+.chatbox-container {
+    height: 600px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  .user-message {
+    color: #ffffff;
+    text-align: right; /* Align user messages to the right */
+  }
+  
+  .ai-message {
+    color: #007bff;
+    text-align: left; /* Align AI messages to the left */
+  }
+  
+  .input-container {
+    margin-top: 10px;
+    background-color: rgba(255, 255, 255, 0.507);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+  }
+  .input-container input {
+    width: 55vw;
+    background-color: rgba(0, 123, 255, 0);
+    border: none;
+  }
+  .input-container button{
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    text-align: center;
+    margin: 5px;
+  }
+  .submit{
+    width: 30px;
+    margin-top: 3px;
+  }
+  

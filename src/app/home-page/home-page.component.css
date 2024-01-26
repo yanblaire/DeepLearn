@@ -1,135 +1,135 @@
 
 @font-face {
-    font-family: Nothing;
-    src: url("../../fonts/NothingYouCouldDo-Regular.ttf");
+  font-family: Nothing;
+  src: url("../../fonts/NothingYouCouldDo-Regular.ttf");
 }
 @font-face {
-    font-family: Nico;
-    src: url("../../fonts/NicoMoji-Regular.ttf");
+  font-family: Nico;
+  src: url("../../fonts/NicoMoji-Regular.ttf");
 }
 section{
-    background-image: url(../..//assets/home.png);
-    background-size: cover;
-    width: 100vw;
-    height: 100vh;
+  background-image: url(../../assets/home.png);
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
 }
 .navbar{
-    text-align: end;
-    padding-top: 10px;
-    padding-left: 10px;
+  text-align: end;
+  padding-top: 10px;
+  padding-left: 10px;
 }
 .navbar a{
-    text-decoration: none;
-    color: white;
-    padding: 10px;
-    margin-top: 100px;
-    font-family: Nothing;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  margin-top: 100px;
+  font-family: Nothing;
 }
 .line{
-    width: 500px;
-    height: 2px;
-    background-color: #FFF;
-    margin-top: 12px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  width: 500px;
+  height: 2px;
+  background-color: #FFF;
+  margin-top: 12px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .title{
-    color: white;
-    text-align: center;
-    font-size: 50px;
-    margin-bottom: 0px;
-    font-family: Nico;
+  color: white;
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 0px;
+  font-family: Nico;
 }
 .desc{
-    color: white;
-    text-align: center;
-    font-family: Nothing;
-    margin-top: 1;
+  color: white;
+  text-align: center;
+  font-family: Nothing;
+  margin-top: 1;
 }
 .content{
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    padding-top: 15vh;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  padding-top: 15vh;
 
 }
 .left{
-    height: 50vh;
-    width: 50vw;
-    position: relative;
+  height: 50vh;
+  width: 50vw;
+  position: relative;
 }
 .left img{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 419px;
-    height: 370px;
-    border-radius: 20px;
-    opacity: 0.5;
-    filter: blur(2.5px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 419px;
+  height: 370px;
+  border-radius: 20px;
+  opacity: 0.5;
+  filter: blur(2.5px);
 }
 .left h2{
-    transform: rotate(-90.033deg);
-    color: #FFF;
-    font-size: 80px;
-    font-size: 400;
-    position: absolute;
-    top: 15%;
-    left: -18%;
-    font-family: Nico;
+  transform: rotate(-90.033deg);
+  color: #FFF;
+  font-size: 80px;
+  font-size: 400;
+  position: absolute;
+  top: 15%;
+  left: -18%;
+  font-family: Nico;
 }
 .left h3{
-    color: #FFF;
-    font-size: 64px;
-    font-weight: 400;
-    position: absolute;
-    top: -35%;
-    left: 45%;
-    font-family: Nico;
+  color: #FFF;
+  font-size: 64px;
+  font-weight: 400;
+  position: absolute;
+  top: -35%;
+  left: 45%;
+  font-family: Nico;
 }
 .left h4{
-    text-align: center;
-    align-items: center;
-    color: #FFF;
-    font-size: 40px;
-    font-weight: 400;
-    font-family: Nothing;
+  text-align: center;
+  align-items: center;
+  color: #FFF;
+  font-size: 40px;
+  font-weight: 400;
+  font-family: Nothing;
 }
 .right{
-    height: 50vh;
-    width: 50vw;
-    color: white;
-    text-align: center;
+  height: 50vh;
+  width: 50vw;
+  color: white;
+  text-align: center;
 }
 .right h2{
-    font-size: 40px;
+  font-size: 40px;
 }
 .right h3{
-    width: 400px;
-    position: relative;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  width: 400px;
+  position: relative;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .buttons{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .buttons button{
-    width: 250px;
-    height: 50px;
-    padding: 5px;
-    margin: 10px;
-    background-color: rgb(150, 218, 237);
-    border: none;
-    border-radius: 20px;
-    font-size: large;
-    font-weight: bold;
+  width: 250px;
+  height: 50px;
+  padding: 5px;
+  margin: 10px;
+  background-color: rgb(150, 218, 237);
+  border: none;
+  border-radius: 20px;
+  font-size: large;
+  font-weight: bold;
 }
 .buttons button:hover{
-    background-color: white;
+  background-color: white;
 }

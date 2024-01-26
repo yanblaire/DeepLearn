@@ -1,0 +1,14 @@
+<header>
+    <div class="topLeft">
+        <div class="menuBar">
+            <img (click)="toggleSidebar()" src="../../assets/menuBar.png" alt="">
+        </div>
+        <h1 routerLink="/home">Deeplearn</h1>
+    </div>
+    <div class="profile">
+        <img (click)="toggleProfile()" src="../../assets/profile.png" alt="">
+        <app-profile-menu *ngIf="isProfileOpen"></app-profile-menu>
+    </div>
+</header>
+<div class="line"></div>
+<app-side-bar *ngIf="isSidebarOpen | async"></app-side-bar>

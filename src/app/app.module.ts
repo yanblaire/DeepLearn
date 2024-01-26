@@ -1,23 +1,21 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { InstructorClassDashboardComponent } from './instructor-class-dashboard/instructor-class-dashboard.component';
 import { InstructorStudentDashboardComponent } from './instructor-student-dashboard/instructor-student-dashboard.component';
 import { InstructorStudentDetailViewComponent } from './instructor-student-detail-view/instructor-student-detail-view.component';
-
 import { InstructorAddCompetenciesComponent } from './instructor-add-competencies/instructor-add-competencies.component';
 import { HomePageComponent } from './home-page/home-page.component';
-import { NavBarComponent } from './StudentView/nav-bar/nav-bar.component';
-import { SideBarComponent } from './StudentView/side-bar/side-bar.component';
-import { HomeComponent } from './StudentView/home/home.component';
-import { DashboardComponent } from './StudentView/dashboard/dashboard.component';
-import { MyCoursesComponent } from './StudentView/my-courses/my-courses.component';
-import { SettingsComponent } from './StudentView/settings/settings.component';
-import { ProfileComponent } from './StudentView/profile/profile.component';
-import { CourseComponent } from './StudentView/course/course.component';
-import { InstructorsViewComponent } from './InstructorsView/instructors-view/instructors-view.component';
+import { InstructorsViewComponent } from './instructors-view/instructors-view.component';
+import { CourseComponent } from './course/course.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SideBarComponent } from './side-bar/side-bar.component';
+import { ProfileMenuComponent } from './profile-menu/profile-menu.component';
+import { HeaderComponent } from './header/header.component';
+import { ChatBoxComponent } from './chat-box/chat-box.component';
 
 @NgModule({
   declarations: [
@@ -26,20 +24,20 @@ import { InstructorsViewComponent } from './InstructorsView/instructors-view/ins
     InstructorStudentDashboardComponent,
     InstructorStudentDetailViewComponent,
     InstructorAddCompetenciesComponent,
+    StudentViewComponent,
     HomePageComponent,
-    NavBarComponent,
-    SideBarComponent,
-    HomeComponent,
-    DashboardComponent,
-    MyCoursesComponent,
-    SettingsComponent,
-    ProfileComponent,
+    InstructorsViewComponent,
     CourseComponent,
-    InstructorsViewComponent
+    SideBarComponent,
+    ProfileMenuComponent,
+    HeaderComponent,
+    ChatBoxComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
