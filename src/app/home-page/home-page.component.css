@@ -25,6 +25,10 @@ section{
   margin-top: 100px;
   font-family: Nothing;
 }
+.top{
+  padding: 10px;
+  margin: 30px;
+}
 .line{
   width: 500px;
   height: 2px;
@@ -40,6 +44,7 @@ section{
   font-size: 50px;
   margin-bottom: 0px;
   font-family: Nico;
+
 }
 .desc{
   color: white;
@@ -76,7 +81,7 @@ section{
   font-size: 80px;
   font-size: 400;
   position: absolute;
-  top: 15%;
+  top: 25%;
   left: -18%;
   font-family: Nico;
 }
@@ -85,17 +90,20 @@ section{
   font-size: 64px;
   font-weight: 400;
   position: absolute;
-  top: -35%;
+  top: -10%;
   left: 45%;
   font-family: Nico;
 }
 .left h4{
+  display: flex;
+  justify-content: center;
   text-align: center;
   align-items: center;
   color: #FFF;
   font-size: 40px;
   font-weight: 400;
   font-family: Nothing;
+  height: 400px;
 }
 .right{
   height: 50vh;
