@@ -1,0 +1,10 @@
+<div class="chatbox-container">
+    <div *ngFor="let message of messages" [ngClass]="{'user-message': message.isUser, 'ai-message': !message.isUser}">
+      {{ message.text }}
+    </div>
+  </div>
+  <div class="input-container">
+    <input [(ngModel)]="userInput" placeholder="Type your message..." />
+    <button (click)="sendMessage()"><img class="submit" src="../../assets/submit.png"></button>
+  </div>
+  

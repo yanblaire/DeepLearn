@@ -12,6 +12,11 @@ import { StudentViewComponent } from './student-view/student-view.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { InstructorsViewComponent } from './instructors-view/instructors-view.component';
 import { CourseComponent } from './course/course.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SideBarComponent } from './side-bar/side-bar.component';
+import { ProfileMenuComponent } from './profile-menu/profile-menu.component';
+import { HeaderComponent } from './header/header.component';
+import { ChatBoxComponent } from './chat-box/chat-box.component';
 
 @NgModule({
   declarations: [
@@ -24,11 +29,16 @@ import { CourseComponent } from './course/course.component';
     HomePageComponent,
     InstructorsViewComponent,
     CourseComponent,
+    SideBarComponent,
+    ProfileMenuComponent,
+    HeaderComponent,
+    ChatBoxComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

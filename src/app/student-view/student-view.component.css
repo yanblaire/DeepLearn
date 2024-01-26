@@ -9,39 +9,6 @@ section{
     width: 100vw;
     height: 100vh;
 }
-header{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-}
-header h1{
-    font-family: Nico;
-    color: white;
-    font-size: 50px;
-    margin: 10px;
-    margin-left: 20px;
-}
-.topLeft{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-.menuBar img{
-    margin-top: 12px;
-    margin-left: 20px;
-}
-.profile img{
-    padding-top: 10px;
-    margin-right: 20px;
-    width: 60px;
-}
-.line{
-    background-color: white;
-    height: 1px;
-    margin-top: 10px;
-}
 .body{
     margin-left: auto;
     margin-right: auto;

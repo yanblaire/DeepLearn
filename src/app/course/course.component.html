@@ -1,18 +1,18 @@
 <section>
-    <header>
-        <div class="topLeft">
-            <div class="menuBar">
-                <img src="../../assets/menuBar.png" alt="">
-            </div>
-            <h1 routerLink="/home">Deeplearn</h1>
-        </div>
-        <div class="profile">
-            <img src="../../assets/profile.png" alt="">
-        </div>
-    </header>
-    <div class="line"></div>
+    <app-header></app-header>
 
     <div class="back" routerLink="/student">
         <p>< Back</p>
+    </div>
+    <div class="content">
+        <div class="left">
+            <h2>Swift</h2>
+            <div class="line"></div>
+            <p>Other Contents</p>
+
+        </div>
+        <div class="right">
+            <app-chat-box></app-chat-box>
+        </div>
     </div>
 </section>
