@@ -17,6 +17,7 @@ import { ProfileMenuComponent } from './profile-menu/profile-menu.component';
 import { HeaderComponent } from './header/header.component';
 import { ChatBoxComponent } from './chat-box/chat-box.component';
 import { StudentViewComponent } from '../app/student-view/student-view.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { StudentViewComponent } from '../app/student-view/student-view.component
     ChatBoxComponent,
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,

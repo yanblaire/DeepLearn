@@ -1,10 +1,16 @@
 <div class="chatbox-container">
-    <div *ngFor="let message of messages" [ngClass]="{'user-message': message.isUser, 'ai-message': !message.isUser}">
-      {{ message.text }}
-    </div>
+  <div *ngFor="let message of messages" [ngClass]="{'user-message': message.isUser, 'ai-message': !message.isUser}">
+    {{ message.text }}
   </div>
-  <div class="input-container">
-    <input [(ngModel)]="userInput" placeholder="Type your message..." />
-    <button (click)="sendMessage()"><img class="submit" src="../../assets/submit.png"></button>
+  <div *ngIf="isWaitingForAi" class="ai-message">
+    <!-- Add a loading indicator or message -->
+    Loading AI response...
   </div>
-  
+</div>
+
+<div class="input-container">
+  <input [(ngModel)]="userInput" placeholder="Type your message..." />
+  <button (click)="sendMessage()" [disabled]="isWaitingForAi">
+    <img class="submit" src="../../assets/submit.png" />
+  </button>
+</div>
