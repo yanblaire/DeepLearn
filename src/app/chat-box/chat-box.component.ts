@@ -1,4 +1,6 @@
+// chat-box.component.ts
 import { Component } from '@angular/core';
+import { ChatService } from '../chat.service';
 
 @Component({
   selector: 'app-chat-box',
@@ -8,16 +10,33 @@ import { Component } from '@angular/core';
 export class ChatBoxComponent {
   messages: { text: string; isUser: boolean }[] = [];
   userInput = '';
+  isWaitingForAi = false;
+
+  constructor(private chatService: ChatService) {}
 
   sendMessage() {
     // Add user message to the chat
     this.messages.push({ text: this.userInput, isUser: true });
 
-    // Simulate AI response for now
-    const aiResponse = 'This is a sample AI response.';
+    // Set the flag to indicate that we're waiting for the AI response
+    this.isWaitingForAi = true;
 
-    // Add AI response to the chat with letter-by-letter animation
-    this.addAiResponse(aiResponse);
+    // Call the chat service to get AI response
+    this.chatService.getAIResponse(this.userInput).subscribe(
+      (response) => {
+        console.log(response)
+        // Add AI response to the chat with letter-by-letter animation
+        this.addAiResponse(response.aiResponse);
+
+        // Reset the flag after receiving the response
+        this.isWaitingForAi = false;
+      },
+      (error) => {
+        console.error('Error fetching AI response:', error);
+        // Reset the flag in case of an error
+        this.isWaitingForAi = false;
+      }
+    );
 
     // Clear the user input
     this.userInput = '';
@@ -41,7 +60,7 @@ export class ChatBoxComponent {
           this.messages[this.messages.length - 1].text = currentResponse;
         }
         // Return a promise with a delay
-        return new Promise<void>((resolve) => setTimeout(resolve, 100)); // Adjust the delay as needed
+        return new Promise<void>((resolve) => setTimeout(resolve, 10)); // Adjust the delay as needed
       });
     }, Promise.resolve());
   }
