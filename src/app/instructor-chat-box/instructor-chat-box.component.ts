@@ -1,13 +1,12 @@
-// student-chat-box.component.ts
 import { Component } from '@angular/core';
 import { ChatService } from '../chat.service';
 
 @Component({
-  selector: 'app-student-chat-box',
-  templateUrl: './student-chat-box.component.html',
-  styleUrls: ['./student-chat-box.component.css']
+  selector: 'app-instructor-chat-box',
+  templateUrl: './instructor-chat-box.component.html',
+  styleUrls: ['./instructor-chat-box.component.css']
 })
-export class StudentChatBoxComponent {
+export class InstructorChatBoxComponent {
   messages: { text: string; isUser: boolean }[] = [];
   userInput = '';
   isWaitingForAi = false;
@@ -21,8 +20,8 @@ export class StudentChatBoxComponent {
     // Set the flag to indicate that we're waiting for the AI response
     this.isWaitingForAi = true;
 
-    // Call the chat service to get AI response for students
-    this.chatService.getStudentAIResponse(this.userInput).subscribe(
+    // Call the chat service to get AI response for instructors
+    this.chatService.getInstructorAIResponse(this.userInput).subscribe(
       (response) => {
         console.log(response);
         // Add AI response to the chat with letter-by-letter animation
