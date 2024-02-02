@@ -15,7 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { ProfileMenuComponent } from './profile-menu/profile-menu.component';
 import { HeaderComponent } from './header/header.component';
-import { ChatBoxComponent } from './chat-box/chat-box.component';
+import { StudentChatBoxComponent } from './student-chat-box/student-chat-box.component';
 import { StudentViewComponent } from '../app/student-view/student-view.component';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -33,7 +33,7 @@ import { HttpClientModule } from '@angular/common/http';
     SideBarComponent,
     ProfileMenuComponent,
     HeaderComponent,
-    ChatBoxComponent,
+    StudentChatBoxComponent,
   ],
   imports: [
     HttpClientModule,
