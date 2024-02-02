@@ -15,9 +15,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { ProfileMenuComponent } from './profile-menu/profile-menu.component';
 import { HeaderComponent } from './header/header.component';
-import { ChatBoxComponent } from './chat-box/chat-box.component';
+import { StudentChatBoxComponent } from './student-chat-box/student-chat-box.component';
 import { StudentViewComponent } from '../app/student-view/student-view.component';
 import { HttpClientModule } from '@angular/common/http';
+import { InstructorChatBoxComponent } from './instructor-chat-box/instructor-chat-box.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { HttpClientModule } from '@angular/common/http';
     SideBarComponent,
     ProfileMenuComponent,
     HeaderComponent,
-    ChatBoxComponent,
+    StudentChatBoxComponent,
+    InstructorChatBoxComponent,
   ],
   imports: [
     HttpClientModule,

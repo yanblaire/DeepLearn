@@ -7,12 +7,16 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ChatService {
-  private apiUrl = 'http://localhost:8200/api/get-ai-response'; // Update this if your endpoint is different
+  private apiUrlStudent = 'http://localhost:8200/api/get-student-ai-response';
+  private apiUrlInstructor = 'http://localhost:8200/api/get-instructor-ai-response';
 
   constructor(private http: HttpClient) {}
 
-  getAIResponse(userInput: string): Observable<{ aiResponse: string }> {
-  console.log({ userInput })
-    return this.http.post<{ aiResponse: string }>(this.apiUrl, { userInput });
+  getStudentAIResponse(userInput: string): Observable<{ aiResponse: string }> {
+    return this.http.post<{ aiResponse: string }>(this.apiUrlStudent, { userInput });
+  }
+
+  getInstructorAIResponse(userInput: string): Observable<{ aiResponse: string }> {
+    return this.http.post<{ aiResponse: string }>(this.apiUrlInstructor, { userInput });
   }
 }
