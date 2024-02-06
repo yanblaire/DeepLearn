@@ -45,6 +45,7 @@ app.post('/api/get-instructor-ai-response', async (req, res) => {
 app.post('/api/get-student-ai-response', async (req, res) => {
   const { userInput } = req.body;
   const instructions = `
+  your creator is Yan and his friend is isaac.
   Instruction for the AI:
 
   1. Begin by telling the user what will be discussed. In this case, "We will be discussing variables and constants in Swift programming language today."

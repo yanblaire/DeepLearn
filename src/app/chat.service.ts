@@ -2,6 +2,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+// import * as dotenv from 'dotenv';
+import { environment } from '../environments/environment';
+
+
+// Load environment variables from .env file
+// dotenv.config();
 
 @Injectable({
   providedIn: 'root',
@@ -10,13 +16,24 @@ export class ChatService {
   private apiUrlStudent = 'http://localhost:8200/api/get-student-ai-response';
   private apiUrlInstructor = 'http://localhost:8200/api/get-instructor-ai-response';
 
-  constructor(private http: HttpClient) {}
+// Use the OpenAI API key from the environment variable
+private apiKey = environment.openaiApiKey || 'default-api-key-for-local-development';
 
-  getStudentAIResponse(userInput: string): Observable<{ aiResponse: string }> {
-    return this.http.post<{ aiResponse: string }>(this.apiUrlStudent, { userInput });
-  }
+constructor(private http: HttpClient) {}
 
-  getInstructorAIResponse(userInput: string): Observable<{ aiResponse: string }> {
-    return this.http.post<{ aiResponse: string }>(this.apiUrlInstructor, { userInput });
-  }
+getStudentAIResponse(userInput: string): Observable<{ aiResponse: string }> {
+  return this.http.post<{ aiResponse: string }>(this.apiUrlStudent, { userInput }, {
+    headers: {
+      Authorization: `Bearer ${this.apiKey}`,
+    },
+  });
+}
+
+getInstructorAIResponse(userInput: string): Observable<{ aiResponse: string }> {
+  return this.http.post<{ aiResponse: string }>(this.apiUrlInstructor, { userInput }, {
+    headers: {
+      Authorization: `Bearer ${this.apiKey}`,
+    },
+  });
+}
 }
