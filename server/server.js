@@ -2,6 +2,23 @@ const express = require('express');
 const axios = require('axios');
 const dotenv = require('dotenv');
 const cors = require('cors');
+const mongoose = require('mongoose');
+const { Schema } = mongoose;
+
+const testSchema = new mongoose.Schema({
+  name: String,
+  age: Number
+})
+const testSchemaModel = mongoose.model('Test', testSchema);
+
+// Connect MongoDB at default port 27017.
+mongoose.connect(process.env.MONGO_DB).then((database)=> {
+//    testSchema
+    // testSchemaModel.insertMany([{name: 'John', age: 21}])
+    testSchemaModel.findOne({name: 'John'}).then((data)=> {
+        console.log(data)
+        })
+    })
 
 dotenv.config();
 
