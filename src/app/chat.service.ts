@@ -13,8 +13,8 @@ import { environment } from '../environments/environment';
   providedIn: 'root',
 })
 export class ChatService {
-  private apiUrlStudent = 'http://deeplearn-server.azurewebsites.net/api/get-student-ai-response';
-  private apiUrlInstructor = 'http://deeplearn-server.azurewebsites.net/api/get-instructor-ai-response';
+  private apiUrlStudent = 'https://deeplearn-server.azurewebsites.net/api/get-student-ai-response';
+  private apiUrlInstructor = 'https://deeplearn-server.azurewebsites.net/api/get-instructor-ai-response';
 
 // Use the OpenAI API key from the environment variable
 private apiKey = environment.openaiApiKey || 'default-api-key-for-local-development';
