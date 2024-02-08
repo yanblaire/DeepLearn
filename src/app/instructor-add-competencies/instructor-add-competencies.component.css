@@ -42,6 +42,7 @@ section{
     color: White;
     background-color: rgba(255, 255, 255, 0.25);
     border-radius: 10px;
+    display: none;
 }
 .left h2{
     font-size: xx-large;
