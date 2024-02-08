@@ -141,3 +141,62 @@ section{
 .buttons button:hover{
   background-color: white;
 }
+
+@media only screen and (max-width: 1000px) {
+  .content{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-top: 15vh;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .right{
+    height: 310px;
+    margin-top: 50px;
+  }
+  section{
+    background-image: url(../../assets/home.png);
+    background-size: cover;
+    width: 100vw;
+    height: 140vh;
+
+  }
+  .left h2{
+    display: none;
+  }
+  .left h3{
+    top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
+}
+
+@media only screen and (max-width: 700px){
+  .top{
+    padding: 50px 0px 0px;
+    margin: 0px;
+  }
+  .line{
+    width: 75vw;
+  }
+  .left img{
+    width: 95vw;
+  }
+  .right h3{
+    width: 90vw;
+  }
+  .content{
+    padding-top: 100px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  section{
+    background-image: url(../../assets/home.png);
+    background-size: cover;
+    width: 100vw;
+    height: 160vh;
+
+  }
+}

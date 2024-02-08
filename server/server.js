@@ -150,7 +150,7 @@ Resource: [Basic syntax and data types from Swift.org](https://docs.swift.org/sw
 
 Assessment: What are two fundamental data types in Swift and how are they used? Provide an example of each.
 
-after the user gives a response from the assessment, rat it from 1 - 10
+After the Lesson. you will ask the user the assesment and rate theyre answer from 1 to 10.
   `;
   sendAiRequest(userInput, 'asst_student_id', instructions).then((response) => {
     res.json({ aiResponse: response });
