@@ -19,9 +19,11 @@
   </div>
 </div>
 
+<!-- Update the input to use a textarea -->
 <div class="input-container">
-  <input [(ngModel)]="userInput" placeholder="Type your message..." />
+  <textarea [(ngModel)]="userInput" placeholder="Type your message..." (keydown.enter)="$event.stopPropagation();"></textarea>
   <button (click)="sendMessage()" [disabled]="isWaitingForAi">
     <img class="submit" src="../../assets/submit.png" />
   </button>
 </div>
+
