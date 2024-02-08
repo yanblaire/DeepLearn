@@ -1,19 +1,16 @@
 <section>
     <app-header></app-header>
     <div class="body">
-        <div class="title">
-            <h2>My Courses</h2>
-        </div>
-        <div class="content">
-            <div routerLink="/instructor-class" class="class1">
-                <p>Swift</p>
+      <div class="title">
+        <h2>My Courses</h2>
+      </div>
+      <div class="content">
+        <div *ngFor="let lessonPlan of lessonPlans" class="class-box">
+            <div class="class1" [routerLink]="['/instructor-class', lessonPlan.subjectName]">
+                <p>{{ lessonPlan.subjectName }}</p>
             </div>
-            <div class="class2"></div>
-            <div class="addClass">
-                <img src="../../assets/plus.png" alt="plus">
-                <h3>Create Class</h3>
-            </div>
-
         </div>
+      </div>
     </div>
-</section>
+  </section>
+  

@@ -73,6 +73,43 @@ function extractLessonPlanData(aiResponse) {
   return daysData;
 }
 
+
+const courseSchema = new mongoose.Schema({
+  subjectName: String,
+});
+
+const Course = mongoose.model('Course', courseSchema);
+
+// Sample data
+const initialCourses = [
+  { subjectName: 'Swift' },
+  { subjectName: 'JavaScript' },
+  // Add more courses as needed
+];
+
+// Initialize courses in the database
+Course.insertMany(initialCourses)
+  .then(docs => {
+    console.log('Courses initialized:', docs);
+  })
+  .catch(err => {
+    console.error('Error initializing courses:', err);
+  });
+
+// Route to fetch courses
+app.get('/api/courses', async (req, res) => {
+  try {
+    const courses = await Course.find();
+    res.json({ courses });
+  } catch (error) {
+    console.error('Error fetching courses from MongoDB:', error);
+    res.status(500).json({
+      error: 'Internal Server Error',
+      msg: error,
+    });
+  }
+});
+
 // Instructor Assistant
 app.post('/api/get-instructor-ai-response', async (req, res) => {
   const { userInput } = req.body;
@@ -137,6 +174,23 @@ app.get('/api/get-lesson-plan-data', async (req, res) => {
     });
   }
 });
+
+// Add a new route to fetch lesson details by ID
+app.get('/api/lesson-details/:lessonPlanId', async (req, res) => {
+  const { lessonPlanId } = req.params;
+
+  try {
+    const lessonDetails = await LessonPlan.findById(lessonPlanId);
+    res.json({ lessonDetails });
+  } catch (error) {
+    console.error('Error fetching lesson details from MongoDB:', error);
+    res.status(500).json({
+      error: 'Internal Server Error',
+      msg: error,
+    });
+  }
+});
+
 
 // Student Assistant
 app.post('/api/get-student-ai-response', async (req, res) => {

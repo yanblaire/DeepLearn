@@ -65,3 +65,46 @@ section{
     margin-left: auto;
     margin-right: auto;
 }
+
+/* Add styles for class2 */
+/* .class2 {
+    Add your styles for class2
+  } */
+  
+  /* Add styles for addClass */
+  .addClass:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+  }
+
+  .class-box {
+    margin: 10px;
+    background-color: white;
+    width: 220px;
+    height: 235px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .class-box p {
+    color: black;
+    font-size: x-large;
+    font-weight: bold;
+  }
+  
+  .view-details {
+    margin-top: 10px;
+    cursor: pointer;
+    color: white;
+    background-color: #007BFF;
+    padding: 5px 10px;
+    border-radius: 10px;
+  }
+  
+  .view-details:hover {
+    background-color: #0056b3;
+  }
+  

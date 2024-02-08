@@ -8,11 +8,12 @@ import { InstructorStudentDetailViewComponent } from './instructor-student-detai
 import { StudentViewComponent } from './student-view/student-view.component';
 import { InstructorsViewComponent } from './instructors-view/instructors-view.component';
 import { CourseComponent } from './course/course.component';
+import { LessonDetailsComponent } from './lesson-details/lesson-details.component';
 
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
-  { path: 'instructor-class', component: InstructorClassDashboardComponent },
+  { path: 'instructor-class/:subjectName', component: InstructorClassDashboardComponent },
   { path: 'instructor-student', component: InstructorStudentDashboardComponent },
   { path: 'instructor-competencies', component: InstructorAddCompetenciesComponent },
   { path: 'instructor-student-detail', component: InstructorStudentDetailViewComponent },
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'instructor', component: InstructorsViewComponent },
   { path: 'home', component: HomePageComponent },
   { path: 'course', component: CourseComponent },
+  { path: 'lesson-details/:lessonPlanId', component: LessonDetailsComponent },
 
 ];
 

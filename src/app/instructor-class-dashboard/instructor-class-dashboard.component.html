@@ -4,35 +4,18 @@
         <p>< Back</p>
     </div>
     <div class="body">
-        <h2>Swift</h2>
+        <h2>{{ courseName }}</h2>
         <div class="line"></div>
         <div class="content">
-            <div class="left">
-                <div class="addCom" routerLink="/instructor-competencies">
-                    <img src="../../assets/plus.png" alt="plus">
-                    <h3>Add Competenceis</h3>
+            <div *ngFor="let lessonPlan of lessonPlans" class="lesson-box">
+                <!-- Add the following inside the ngFor loop -->
+                <div *ngFor="let lessonPlan of lessonPlans" class="lesson-box">
+                    <p>{{ lessonPlan.subjectName }}</p>
+                    <!-- Add a routerLink to navigate to lesson details -->
+                    <div class="view-details" [routerLink]="['/lesson-details', lessonPlan._id]">View Details</div>
                 </div>
-                <div class="analytics">
-                    <h3>Analytics & Reports</h3>
-
-                </div>
-
-            </div>
-            <div class="middle">
-                <h3>Assignments and Assessments</h3>
-
-            </div>
-            <div class="right">
-                <h3>Enrolled Students</h3>
-                <ul>
-                    <li>Student 1</li>
-                    <li>Student 2</li>
-                    <li>Student 3</li>
-                </ul>
 
             </div>
         </div>
-
-
     </div>
 </section>

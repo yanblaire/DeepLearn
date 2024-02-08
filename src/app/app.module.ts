@@ -19,6 +19,7 @@ import { StudentChatBoxComponent } from './student-chat-box/student-chat-box.com
 import { StudentViewComponent } from '../app/student-view/student-view.component';
 import { HttpClientModule } from '@angular/common/http';
 import { InstructorChatBoxComponent } from './instructor-chat-box/instructor-chat-box.component';
+import { LessonDetailsComponent } from './lesson-details/lesson-details.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { InstructorChatBoxComponent } from './instructor-chat-box/instructor-cha
     HeaderComponent,
     StudentChatBoxComponent,
     InstructorChatBoxComponent,
+    LessonDetailsComponent,
   ],
   imports: [
     HttpClientModule,
