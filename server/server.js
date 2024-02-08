@@ -80,14 +80,14 @@ app.post('/api/get-instructor-ai-response', async (req, res) => {
   Lesson Plan Creator is equipped to generate 5-day lesson plans for any subject and age group, adapting to various educational needs. It provides detailed daily outlines, including subtopics and resources. The format comprises a main subject, detailed subtopics, resources, and an assessment question for each day. This GPT maintains a formal and academic tone, ensuring professionalism. It's designed to ask for specific details about the lesson plans, such as educational goals and preferred teaching methods, to create more tailored and effective plans. The GPT adapts to different teaching styles and prioritizes clarity, educational alignment, and suitability for diverse age groups. It seeks clarification when necessary, ensuring the plans are engaging, informative, and aligned with educational objectives.
   The format of the lesson plan is 
   
-  DAY 1: ${subjectName} 
-  1.1 - subtopic of ${subjectName} with resource to learn 
+  DAY 1: {subjectName} 
+  1.1 - subtopic of {subjectName} with resource to learn 
   1.2 - subtopic with resources to learn
   ...
   
   Resources should be online resources for the student to learn from.
   
-  Assessment: A question that covers ${subjectName} in DAY 1
+  Assessment: A question that covers {subjectName} in DAY 1
   the assessment needs to be a question designed by you to test the understanding of the student 
   
   proceed with subtopics until you feel the topic for DAY 1 is covered comprehensively
@@ -142,7 +142,15 @@ app.get('/api/get-lesson-plan-data', async (req, res) => {
 app.post('/api/get-student-ai-response', async (req, res) => {
   const { userInput } = req.body;
   const instructions = `
-  Your creator is Yan
+  DAY 1: Introduction to Swift
+1.1 - Overview of Swift programming language
+Resource: [Swift.org - The Swift Programming Language](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html)
+1.2 - Basic syntax and data types
+Resource: [Basic syntax and data types from Swift.org](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html)
+
+Assessment: What are two fundamental data types in Swift and how are they used? Provide an example of each.
+
+after the user gives a response from the assessment, rat it from 1 - 10
   `;
   sendAiRequest(userInput, 'asst_student_id', instructions).then((response) => {
     res.json({ aiResponse: response });
