@@ -35,7 +35,6 @@ const daySchema = new mongoose.Schema({
 });
 
 const lessonPlanSchema = new mongoose.Schema({
-  subjectName: String, // Added subjectName
   days: [daySchema],
 });
 
@@ -91,6 +90,8 @@ app.post('/api/get-instructor-ai-response', async (req, res) => {
   the assessment needs to be a question designed by you to test the understanding of the student 
   
   proceed with subtopics until you feel the topic for DAY 1 is covered comprehensively
+
+  -- after creating the lesson, tell the user the lesson has been created and saved to the database --
   `;
 
   sendAiRequest(userInput, 'asst_instructor_id', instructions).then(async (response) => {
@@ -104,7 +105,6 @@ app.post('/api/get-instructor-ai-response', async (req, res) => {
       // Insert lesson plan data into MongoDB
       try {
         const lessonPlanDocument = new LessonPlan({
-          subjectName: subjectName, // Set the subject name here
           days: lessonPlanData,
         });
 
@@ -150,7 +150,7 @@ Resource: [Basic syntax and data types from Swift.org](https://docs.swift.org/sw
 
 Assessment: What are two fundamental data types in Swift and how are they used? Provide an example of each.
 
-after the user gives a response from the assessment, rat it from 1 - 10
+After the Lesson. you will ask the user the assesment and rate theyre answer from 1 to 10.
   `;
   sendAiRequest(userInput, 'asst_student_id', instructions).then((response) => {
     res.json({ aiResponse: response });

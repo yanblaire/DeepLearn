@@ -31,3 +31,26 @@ header h1{
     height: 1px;
     margin-top: 10px;
 }
+
+@media only screen and (max-width: 550px){
+    header{
+        width: 95vw;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    header h1{
+        font-size: 35px;
+        margin: 10px;
+        margin-left: 0px;
+    }
+    .menuBar img{
+        margin-top: 12px;
+        margin-left: 5px;
+    }
+    .profile img{
+        padding-top: 10px;
+        margin-right: 0px;
+        width: 60px;
+    }
+}

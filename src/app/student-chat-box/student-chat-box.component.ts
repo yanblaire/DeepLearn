@@ -14,6 +14,15 @@ export class StudentChatBoxComponent {
 
   constructor(private chatService: ChatService) {}
 
+  // Add a function to handle 'Enter' key press
+  onEnter(event: Event): void {
+    // Check if the key pressed is 'Enter'
+    if (event instanceof KeyboardEvent && event.key === 'Enter') {
+      this.sendMessage();
+    }
+  }
+
+
   sendMessage() {
     // Add user message to the chat
     this.messages.push({ text: this.userInput, isUser: true });
@@ -66,4 +75,6 @@ export class StudentChatBoxComponent {
       });
     }, Promise.resolve());
   }
+
+  
 }

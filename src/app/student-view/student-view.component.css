@@ -44,3 +44,17 @@ section{
     font-size: x-large;
     font-weight: bold;
 }
+@media only screen and (max-width: 400px){
+    .class1{
+        background-image: url("../../assets/swift.png");
+        border: 2px solid white; 
+    }
+    .class1, .class2, .class3{
+        margin: 10px;
+        background-color: white;
+        width: 220px;
+        height: 235px;
+        border-radius: 20px;
+    }
+    
+}
