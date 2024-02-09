@@ -35,7 +35,6 @@ const daySchema = new mongoose.Schema({
 });
 
 const lessonPlanSchema = new mongoose.Schema({
-  subjectName: String, // Added subjectName
   days: [daySchema],
 });
 
@@ -91,6 +90,8 @@ app.post('/api/get-instructor-ai-response', async (req, res) => {
   the assessment needs to be a question designed by you to test the understanding of the student 
   
   proceed with subtopics until you feel the topic for DAY 1 is covered comprehensively
+
+  -- after creating the lesson, tell the user the lesson has been created and saved to the database --
   `;
 
   sendAiRequest(userInput, 'asst_instructor_id', instructions).then(async (response) => {
@@ -104,7 +105,6 @@ app.post('/api/get-instructor-ai-response', async (req, res) => {
       // Insert lesson plan data into MongoDB
       try {
         const lessonPlanDocument = new LessonPlan({
-          subjectName: subjectName, // Set the subject name here
           days: lessonPlanData,
         });
 

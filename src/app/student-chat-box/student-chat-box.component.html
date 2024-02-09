@@ -1,7 +1,7 @@
 <div class="chatbox-container">
   <div *ngFor="let message of messages" [ngClass]="{'user-message': message.isUser, 'ai-message': !message.isUser}">
     <div *ngIf="message.isUser; else aiMessage" class="user-message-container">
-      <img src="../../assets/userProfile.png" class="profile-picture usersPic" alt="User Profile">
+      <img src="../../assets/userProfile1.jpg" class="profile-picture usersPic" alt="User Profile">
       <div class="message-content">
         {{ message.text }}
       </div>
