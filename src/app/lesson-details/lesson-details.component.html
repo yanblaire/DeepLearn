@@ -1,0 +1,22 @@
+<div *ngIf="lesson">
+    <div *ngFor="let day of lesson.days">
+      <div class="day-container">
+        <h3>Day {{ day.dayNumber }}</h3>
+        <p>Subject Name: {{ day.subjectName }}</p>
+        <p>Assessment: {{ day.assessment }}</p>
+  
+        <div *ngFor="let subtopic of day.subtopics">
+          <div class="subtopic-container">
+            <p>Subtopic: {{ subtopic.name }}</p>
+            <p>Resources:</p>
+            <ul>
+              <li *ngFor="let resource of subtopic.resources">
+                <a href="{{ resource }}" target="_blank">{{ resource }}</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

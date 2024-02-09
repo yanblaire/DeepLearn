@@ -8,6 +8,8 @@ import { InstructorStudentDetailViewComponent } from './instructor-student-detai
 import { StudentViewComponent } from './student-view/student-view.component';
 import { InstructorsViewComponent } from './instructors-view/instructors-view.component';
 import { CourseComponent } from './course/course.component';
+import { LessonComponent } from './lesson/lesson.component';
+import { LessonDetailsComponent } from './lesson-details/lesson-details.component';
 
 
 const routes: Routes = [
@@ -20,6 +22,9 @@ const routes: Routes = [
   { path: 'instructor', component: InstructorsViewComponent },
   { path: 'home', component: HomePageComponent },
   { path: 'course', component: CourseComponent },
+  { path: 'lesson', component: LessonComponent },
+  { path: 'lesson/:id', component: LessonDetailsComponent },
+  { path: '', redirectTo: '/lessons', pathMatch: 'full' },
 
 ];
 

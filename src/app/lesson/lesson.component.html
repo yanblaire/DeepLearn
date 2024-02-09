@@ -1,0 +1,6 @@
+<div *ngFor="let lesson of lessons" class="lesson-container">
+    <div class="lesson-id">
+      <a [routerLink]="['/lesson', lesson._id]">{{ lesson._id }}</a>
+    </div>
+  </div>
+  

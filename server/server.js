@@ -34,17 +34,19 @@ const daySchema = new mongoose.Schema({
   assessment: String,
 });
 
-const lessonPlanSchema = new mongoose.Schema({
+const newLessonPlanSchema = new mongoose.Schema({
+  lessonName: String,  // Adding lesson name schema
   days: [daySchema],
 });
 
 // LessonPlan model
-const LessonPlan = mongoose.model('LessonPlan', lessonPlanSchema);
+const NewLessonPlan = mongoose.model('NewLessonPlan', newLessonPlanSchema);
 
 // Function to extract lesson plan data from the AI response string
 function extractLessonPlanData(aiResponse) {
   const daysData = [];
   const lines = aiResponse.split('\n');
+  let lessonName = '';  // Initialize lessonName
 
   let currentDay = null;
 
@@ -54,6 +56,10 @@ function extractLessonPlanData(aiResponse) {
         daysData.push(currentDay);
       }
       const [dayNumber, subjectName] = line.match(/\d+:(.+)/);
+      if (dayNumber === '1') {
+        // Set lessonName based on subjectName of Day 1
+        lessonName = subjectName.trim();
+      }
       currentDay = { dayNumber: parseInt(dayNumber), subjectName: subjectName.trim(), subtopics: [] };
     } else if (line.startsWith('Assessment:')) {
       currentDay.assessment = line.split('Assessment:')[1].trim();
@@ -69,6 +75,11 @@ function extractLessonPlanData(aiResponse) {
     daysData.push(currentDay);
   }
 
+  // Assign lessonName to each day
+  daysData.forEach(day => {
+    day.lessonName = lessonName;
+  });
+
   return daysData;
 }
 
@@ -79,6 +90,8 @@ app.post('/api/get-instructor-ai-response', async (req, res) => {
   Lesson Plan Creator is equipped to generate 5-day lesson plans for any subject and age group, adapting to various educational needs. It provides detailed daily outlines, including subtopics and resources. The format comprises a main subject, detailed subtopics, resources, and an assessment question for each day. This GPT maintains a formal and academic tone, ensuring professionalism. It's designed to ask for specific details about the lesson plans, such as educational goals and preferred teaching methods, to create more tailored and effective plans. The GPT adapts to different teaching styles and prioritizes clarity, educational alignment, and suitability for diverse age groups. It seeks clarification when necessary, ensuring the plans are engaging, informative, and aligned with educational objectives.
   The format of the lesson plan is 
   
+  It will say relevant message to acknowledge the recieved information.
+  
   DAY 1: {subjectName} 
   1.1 - subtopic of {subjectName} with resource to learn 
   1.2 - subtopic with resources to learn
@@ -87,11 +100,11 @@ app.post('/api/get-instructor-ai-response', async (req, res) => {
   Resources should be online resources for the student to learn from.
   
   Assessment: A question that covers {subjectName} in DAY 1
-  the assessment needs to be a question designed by you to test the understanding of the student 
+  the assessment needs to be a question designed by you to test the understanding of the student.
   
-  proceed with subtopics until you feel the topic for DAY 1 is covered comprehensively
+  Proceed with subtopics until you feel the topic for DAY 1 is covered comprehensively.
 
-  -- after creating the lesson, tell the user the lesson has been created and saved to the database --
+  It will give a response saying the lesson has been created and saved to the database.
   `;
 
   sendAiRequest(userInput, 'asst_instructor_id', instructions).then(async (response) => {
@@ -104,14 +117,14 @@ app.post('/api/get-instructor-ai-response', async (req, res) => {
 
       // Insert lesson plan data into MongoDB
       try {
-        const lessonPlanDocument = new LessonPlan({
+        const newLessonPlanDocument = new NewLessonPlan({
           days: lessonPlanData,
         });
 
-        await lessonPlanDocument.save();
-        console.log('Lesson plan data saved to MongoDB');
+        await newLessonPlanDocument.save();
+        console.log('New lesson plan data saved to MongoDB');
       } catch (error) {
-        console.error('Error saving lesson plan data to MongoDB:', error);
+        console.error('Error saving new lesson plan data to MongoDB:', error);
       }
     }
   }).catch((err) => {
@@ -126,7 +139,7 @@ app.post('/api/get-instructor-ai-response', async (req, res) => {
 // Add a new route to fetch lesson plan data
 app.get('/api/get-lesson-plan-data', async (req, res) => {
   try {
-    const lessonPlanData = await LessonPlan.find();
+    const lessonPlanData = await NewLessonPlan.find();
     console.log('Lesson Plan Data:', lessonPlanData); // Log the data to the console
     res.json({ lessonPlanData });
   } catch (error) {
